@@ -16,13 +16,14 @@ export default function Buttons(){
         }
         
     return(
-        <div>
-            <p><input type="text" value={first}  /></p>
-            {
-                btnz.map((item, ind) =>(
-                    <button key={ind} onClick={() =>handleClick(item)}> {item} </button>
+        <div className="  w-[350px] flex flex-col items-center justify-start  ">
+            <p className="text-center"><input className="w-[300px] text-right p-5  h-[38px] border-[2px] border-black rounded-md text-xl " type="text" value={first} readOnly  /></p>
+            <div className="m-3  ">
+            {btnz.map((item, ind) =>(
+                <button className=" text-stone-800 text-xl m-4 h-[45px] w-[45px] border-[2px] border-black rounded-md active:bg-orange-700 active:text-white " key={ind} onClick={() =>handleClick(item)}> {item} </button>   
                 ))
-            }
+                }
+            </div>
         </div>
     )
 }
